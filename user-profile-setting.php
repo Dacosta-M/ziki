@@ -1,6 +1,11 @@
-<?php include 'includes/header.php';
+<?php
+//include 'includes/config.php';
+//include 'config.php';
+//extract($_SESSION);
+$l="user";
+include 'header.php';
 //print_r($_SESSION);
-extract($_SESSION);?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -188,10 +193,10 @@ input:checked + .slider:before {
             }
 
             else{
-                header("Location: index.php");
+                header("Location: $site_url");
             }
         ?>
-<body id="setCssClass">
+
     <main class="motuns-main-container">
     <div class=" blog-item motuns-content-container">
         <div class="d-flx">
@@ -206,7 +211,10 @@ input:checked + .slider:before {
             <section class="content">
                 <div class="details">
                     <div class="d-grid update">
-                    <img src="<?php echo $img ?>" alt="Not Found" onerror=this.src="assets/img/avatar-2.jpeg" class="avatar" />
+                    <img src="<?php if (isset($img) && $img !==''){echo $img ;
+                    }else {
+                      echo "assets/img/noavatar92.png";
+                    }?>" alt="Not Found" onerror=this.src="assets/img/noavatar92.png" class="avatar" />
                     <br/>
                         <button class="upcase user-profile-button">
                             update
@@ -233,7 +241,6 @@ input:checked + .slider:before {
                 </div>
             </section>
             <section class="theme">
-                
                 <div>
                     <p>
                         Theme
@@ -261,9 +268,9 @@ input:checked + .slider:before {
                         </p>
                     </div>
                 </div>
-                <button class="co.red fl-r">
+                <a role = "button" href = "delete_user.php" class="btn mb-3 user-profile-button co-red">
                     Delete account
-                </button>
+                </a>
             </section>
             <button  class="capitalize lang user-profile-button">
                 Save changes
@@ -274,4 +281,3 @@ input:checked + .slider:before {
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="SwitchTheme.js"></script>
 </html>
-
