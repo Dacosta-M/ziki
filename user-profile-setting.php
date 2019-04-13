@@ -129,13 +129,13 @@ input:checked + .slider:before {
         order:  2;
     }
     .upcase {
-        margin-top: -19rem;
+        margin-top: -10rem;
     }
 
     .theme {
         display: inline-block;
         float: right;
-        margin-top: -25rem;
+        margin-top: -10rem;
         margin-right: -4rem;
     }
 
@@ -198,7 +198,7 @@ input:checked + .slider:before {
 	   <a href="/timeline.php">
             <img class="img-fluid logo" src="assets/img/zikilogo.png">
 	</a>
-            <button type="button" class="log" data-toggle="modal" data-target="#exampleModalCenter">
+            <button type="button" class="log">
                 Log Out
             </button>
         </div>
@@ -213,15 +213,9 @@ input:checked + .slider:before {
                         </button>
                     </div>
                     <form class="user-profile-setting-form" action="#">
-                        First Name*<br>
+                        Full Name*<br>
                         <input class="user-profile-input" type="text" name="firstname" placeholder="Dragon"<?php 
                              echo $name;
-                        ?>">
-                        <br>
-                        
-                        Last Name*<br>
-                        <input class="user-profile-input" type="text" name="lastname" placeholder="Blade"<?php 
-                             
                         ?>">
                         <br>
 
@@ -229,9 +223,6 @@ input:checked + .slider:before {
                         <input class="user-profile-input" type="text" name="email" placeholder="<?php 
                              echo $email;
                         ?>">
-                        <br>
-                        Change password*<br>
-                        <input class="user-profile-input" type="text" name="lastname">
                         <br>
                         Github<br>
                         <input class="user-profile-input" type="text" name="lastname" placeholder="http://github.com/myusername">
